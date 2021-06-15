@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  tls-terminator:
+    environment:
+      APP_SERVER1: http://proxy
+      DOMAIN1: uri.semic.eu
+      EMAIL1: bert.van.nuffelen@tenforce.com
+    image: cad
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./semic.Caddyfile:/etc/caddy/Caddyfile
+      - /etc/caddy/data:/data
+  uriproxy:
+    image: ng
+    ports:
+      - "82:80"
+    command: [nginx-debug, '-g', 'daemon off;']

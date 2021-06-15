@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /mapping/
+Disallow: /vdm/
+Disallow: /about/

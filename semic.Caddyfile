@@ -1,0 +1,64 @@
+{
+  order request_id before header
+}
+
+geodcat-ap.semic.eu, dcat-ap.semic.eu, adms-ap.semic.eu, cpsv-ap.semic.eu, e-documents.semic.eu, health.semic.eu, location.semic.eu, mapping.semic.eu, mdr.semic.eu {
+
+# Fetch the request-id or get a new one
+request_id 
+header * x-request-id {http.request_id}
+
+log { 
+  output stdout 
+  format single_field common_log
+}
+
+#errors stderr
+handle_errors {
+	respond "{http.error.status_code} {http.error.status_text}"
+}
+
+# Configure letsencrypt
+ tls bert.van.nuffelen@tenforce.com
+
+# Proxy everything to the APP_SERVER
+reverse_proxy http://uriproxy {
+ header_up x-request-id {http.request_id}
+}
+
+# We can also overwrite error pages here
+}
+
+uri.semic.eu {
+
+# Fetch the request-id or get a new one
+request_id 
+#request_id x-request-id
+#header / x-request-id {request_id}
+header * x-request-id {http.request_id}
+
+# Make the logs docker friendly and inject the request-id
+# log / stdout "{request_id} - {common}"
+  # format formatted "{request_id} - {common}"
+log { 
+  output stdout 
+  format single_field common_log
+}
+
+#errors stderr
+handle_errors {
+	respond "{http.error.status_code} {http.error.status_text}"
+}
+
+# Configure letsencrypt
+ tls bert.van.nuffelen@tenforce.com
+
+# Proxy everything to the APP_SERVER
+reverse_proxy http://uriproxy {
+ header_up x-request-id {http.request_id}
+}
+
+# We can also overwrite error pages here
+}
+
+
