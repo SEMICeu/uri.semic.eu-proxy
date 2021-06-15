@@ -17,6 +17,7 @@ It consists of 2 proxy which are chained after each-other.
 The Internet facing proxy is a Caddy instance. This has been chosen for its out-of the box tls (https) support.
 The Caddy proxy forwards all traffic to a Nginx. This proxy implements all business logic.
 
+
 ### business logic design
 
 All subdomain traffic is forward to the handling service on a port different from 80 or 443.
@@ -51,3 +52,9 @@ Access to the internet
 ## development
 Doing local development is possible, but one should replace the multidomains in Caddy  with a single localhost domain. This is to avoid that Caddy will try to register a certificate of the exitsing domains.
 The Makefile includes several localhost tests which allow to see the behaviour of the setup.
+
+Both the Caddy and the Nginx are variants of their official Docker images. This is because they require some modules to be activated.
+Caddy allows to extend it with caddy modules through Docker build instructions and having so a close connection with the official repositories.
+Nginx has no standard way to extend is with modules through Docker. The instructions to include common modules into the docker images require to rebuild Nginx from source with the modules included.
+For that the Offical Nginx Docker build script has been copied into this repository. To build the uri.semic.eu Nginx first this images has to be build and then the configured Nginx will be build.
+
