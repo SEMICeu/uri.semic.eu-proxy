@@ -47,7 +47,7 @@ Deployment is done with the following steps:
    - build the dockers
    - start the setup using docker-compose
 
-The build and startup instructions are available in the Makefile in this repository.
+The build and startup instructions are available in the [Makefile](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/Makefile) in this repository.
 
 One can monitor also the services by pulling the logs from the docker-compose. And example of the statement is found in the Makefile.
 
@@ -67,17 +67,30 @@ For that the Offical Nginx Docker build script has been copied into this reposit
 
 ## common activities
 
-### 
+### redeploy a new configuration on the uri.semic.eu VM:
+1. login on the uri.semic.eu VM 
+2. goto to the location where this repository is checked out (/home/admin/proxy) 
+3. pull the new content from github or adapt locally the configuration. Local adapations should be committed and pushed to github.
+4. Build a new nginx container: `make nginx`
+5. Restart the docker-compose setup to use the newly build nginx container: `make run`
 
 ### adding a new PURI
 1. For each new PURI in an existing domain the following steps must be done to make the PURI resolveable:
-  - add in the repository (uri.semic.eu-puris)[https://github.com/SEMICeu/uri.semic.eu-puris] the data in each RDF serialization at the right path in the directory _releases_
-  - add in the (htmlmapping configuration file)[https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/htmlmap.lua] the mapping of the path to the target html URL.
+  - add in the repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) the data in each RDF serialization at the right path in the directory _releases_
+  - add in the [htmlmapping configuration file](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/htmlmap.lua) the mapping of the path to the target html URL.
  
-2. Redeploy the new configuration on the uri.semic.eu VM:
-  - build a new nginx container
-  - restart the docker-compose setup to use the newly build nginx container
+2. Redeploy the new configuration on the uri.semic.eu VM
 
+### adding a new PURI domain {REF} 
+1. Copy the nginx configuration for the domain [m8g](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/urisemic.nginx.conf.d#L145) to {REF} in the [config file](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/urisemic.nginx.conf.d) and adapt all occurences of m8g in the copied block to {REF}.
+2. Add the data for each PURI in domain {REF} as described above
+3. Redeploy the new configuration on the uri.semic.eu VM
 
+## TODO
+
+1. activate autorestart when VM restarts
+2. improvements on the URL processing:
+     - support for Accept header qs and level specifications (low usage though)
+  
 
 
