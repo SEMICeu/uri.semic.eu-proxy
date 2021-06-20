@@ -29,6 +29,14 @@ It will convert any request on the path {REF} based on the Accept header and the
 This target URL can either correspond to a path in the repository https://github.com/SEMICeu/uri.semic.eu-puris or a URL targeting the html representation.
 Because the html representation of the URI is not yet harmonised in one place, there is a mapping table that will forward the requests to the target url.
 
+### implemented rules
+The implemented rules for mapping a PURI to the URL are
+  
+  - If the URL is of the form http(s)://uri.semic.eu/{REF}/{entitypath}.{extension} 
+     - if the extension is a supported extension, return the data in the form of the extension 
+  - If the URL is requested with HTTP header _Accept_
+     - if the value of the header is one of the supported headers, return the data in the form of the accept header
+  Otherwise return the html version according to the mapping table [htmlmap.lua](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/htmlmap.lua).
 
 ## Deployment
 The configuration and setup is dockerized and thus can easily deployed on any virtual machine having access to the internet. 
@@ -44,8 +52,9 @@ The build and startup instructions are available in the Makefile in this reposit
 One can monitor also the services by pulling the logs from the docker-compose. And example of the statement is found in the Makefile.
 
 ## System requirements
-Docker and Docker-compose installed.
-Access to the internet
+
+- Docker and Docker-compose installed.
+- Access to the internet
 
 ## development
 Doing local development is possible, but one should replace the multidomains in Caddy  with a single localhost domain. This is to avoid that Caddy will try to register a certificate of the existing domains.
@@ -55,4 +64,20 @@ Both the Caddy and the Nginx are variants of their official Docker images. This 
 Caddy allows to extend it with caddy modules through Docker build instructions and having so a close connection with the official repositories.
 Nginx has no standard way to extend is with modules through Docker. The instructions to include common modules into the docker images require to rebuild Nginx from source with the modules included.
 For that the Offical Nginx Docker build script has been copied into this repository. To build the uri.semic.eu Nginx first this images has to be build and then the configured Nginx will be build.
+
+## common activities
+
+### 
+
+### adding a new PURI
+1. For each new PURI in an existing domain the following steps must be done to make the PURI resolveable:
+  - add in the repository (uri.semic.eu-puris)[https://github.com/SEMICeu/uri.semic.eu-puris] the data in each RDF serialization at the right path in the directory _releases_
+  - add in the (htmlmapping configuration file)[https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/htmlmap.lua] the mapping of the path to the target html URL.
+ 
+2. Redeploy the new configuration on the uri.semic.eu VM:
+  - build a new nginx container
+  - restart the docker-compose setup to use the newly build nginx container
+
+
+
 
