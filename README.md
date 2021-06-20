@@ -65,6 +65,8 @@ Caddy allows to extend it with caddy modules through Docker build instructions a
 Nginx has no standard way to extend is with modules through Docker. The instructions to include common modules into the docker images require to rebuild Nginx from source with the modules included.
 For that the Offical Nginx Docker build script has been copied into this repository. To build the uri.semic.eu Nginx first this images has to be build and then the configured Nginx will be build.
 
+Updating the proxies to more recent versions to remove security treats is done by rebuilding the container images and bumping where required the version numbers in the Dockerfile configurations. 
+
 ## common activities
 
 ### redeploy a new configuration on the uri.semic.eu VM:
@@ -91,6 +93,9 @@ For that the Offical Nginx Docker build script has been copied into this reposit
 1. activate autorestart when VM restarts
 2. improvements on the URL processing:
      - support for Accept header qs and level specifications (low usage though)
+3. infrastrure as code (improved service management)
+     (**rescue docker image storage**)
+     Although the Docker containers are build from official Docker images, low maintenance activity might reside in a situation in which the deployed version is not anymore supported and available. And that the Docker image cannot be rebuilt. To avoid long downtime in the case where the uri.semic.eu VM looses the docker images (which are stored in the VM disk) and the docker containers cannot be immediately rebuilt from this repository the docker images should be pushed to an external docker container repository. In that case downtime can be reduced by pulling the latest built image from that repository. This activity is a step towards implementing the uri.semic.eu VM by the _infracture as code_ principle.         
   
 
 
