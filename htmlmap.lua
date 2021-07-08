@@ -61,6 +61,7 @@ _M.htmlmap = {
   [ "/m8g/weight" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Criterion%3Aweight",
   [ "/m8g/weightingConsiderationDescription" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Criterion%3Aweighting%20consideration%20description",
   [ "/m8g/weightingType" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Criterion%3Aweighting%20type"
+  [ "/r5r/availability/temporary" ] = "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#recommended-properties-for-distribution"
   }
 
 return _M
