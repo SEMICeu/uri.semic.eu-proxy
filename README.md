@@ -96,6 +96,6 @@ Updating the proxies to more recent versions to remove security treats is done b
 3. infrastrure as code (improved service management)
      (**rescue docker image storage**)
      Although the Docker containers are build from official Docker images, low maintenance activity might reside in a situation in which the deployed version is not anymore supported and available. And that the Docker image cannot be rebuilt. To avoid long downtime in the case where the uri.semic.eu VM looses the docker images (which are stored in the VM disk) and the docker containers cannot be immediately rebuilt from this repository the docker images should be pushed to an external docker container repository. In that case downtime can be reduced by pulling the latest built image from that repository. This activity is a step towards implementing the uri.semic.eu VM by the _infracture as code_ principle.         
-  
+4. activate robots.txt in all subdomains  
 
 
