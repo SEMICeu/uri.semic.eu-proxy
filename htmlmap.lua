@@ -61,7 +61,13 @@ _M.htmlmap = {
   [ "/m8g/weight" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Criterion%3Aweight",
   [ "/m8g/weightingConsiderationDescription" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Criterion%3Aweighting%20consideration%20description",
   [ "/m8g/weightingType" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Criterion%3Aweighting%20type",
-  [ "/r5r/availability/temporary" ] = "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/#recommended-properties-for-distribution"
+  [ "/r5r/availability" ] = "https://github.com/SEMICeu/DCAT-AP/raw/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0.rdf",
+  [ "/r5r/availability/temporary" ] = "http://publications.europa.eu/resource/authority/planned-availability/TEMPORARY",
+  [ "/r5r/availability/experimental" ] = "http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL",
+  [ "/r5r/availability/available" ] = "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE",
+  [ "/r5r/availability/stable" ] = "http://publications.europa.eu/resource/authority/planned-availability/STABLE",
+  [ "/p4s/xml/PERSON" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person"
+
   }
 
 return _M

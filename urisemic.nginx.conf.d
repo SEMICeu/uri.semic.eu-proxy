@@ -118,8 +118,10 @@ server {
         rewrite ^/(.*)$ https://joinup.ec.europa.eu/solution/asset-description-metadata-schema-adms redirect;
     }
 
+#        rewrite ^/(.*)$ https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe redirect;
     location /dcatap {
-        rewrite ^/(.*)$ https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe redirect;
+        rewrite ^/dcatap/(.*)$ /r5r/$1 redirect;
+        rewrite ^/dcatap https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe redirect;
     }
 
     location /statdcatap  {
@@ -346,8 +348,8 @@ server {
 			    uri = htmlmap.htmlmap[entity_noextension]
 		     else
 			    -- point to a default html page on the core vocs
---			    uri = ngx.re.sub(entity_noextension, "^/p4s/(.*)", "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies", "o")
-			    uri = "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies"
+--			    uri = ngx.re.sub(entity_noextension, "^/p4s/(.*)", "https://github.com/SEMICeu/SDG-sandbox", "o")
+			    uri = "https://github.com/SEMICeu/SDG-sandbox"
 		    end
               end
          end

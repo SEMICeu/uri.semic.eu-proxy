@@ -13,7 +13,7 @@ The system may handle also optionally
 
 ## Setup
 
-It consists of 2 proxy which are chained after each-other.
+It consists of 2 proxies which are chained after each-other.
 The Internet facing proxy is a Caddy instance. This has been chosen for its out-of the box tls (https) support.
 The Caddy proxy forwards all traffic to a Nginx. This proxy implements all business logic.
 
@@ -49,14 +49,22 @@ Deployment is done with the following steps:
 
 The build and startup instructions are available in the [Makefile](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/Makefile) in this repository.
 
-One can monitor also the services by pulling the logs from the docker-compose. And example of the statement is found in the Makefile.
+One can monitor also the services by pulling the logs from the docker-compose. An example of the statement is found in the Makefile.
 
-## System requirements
+### Prerequisite knowledge
+It is assumed that contributors are familiar with the HTTP protocol, proxies and Docker. Specific knowledge of the used proxies in this repository is not mandatory, but helpful. This knowledge can be (should be) acquired by reading the manuals. As the proxies are a living ecosystem, over time improvements or adapatations should be made to the configuration to have the most recent version of the proxies running.
+
+Knowledge about _containerization_ more specifically the Docker ecosystem is needed. The design is build on top of Docker to make the solution easy transferable to other systems. The commandline statements included in this repository are only explained to the level of their purpose in the realization of the desired functionality. Retrieving detailed semantics of the command and their parameters is up to the reader to look up in the manual on docker.
+
+One base aspect from Docker is the layering of images on top of eachother. This means that one extends one image with additional configuration to create a new image. This process is repeated over and over, crossing projects and organisations, to reach the desired image. The design of the layering is part of the architecture. It determines the key flexibility points. A centralistic approach where everyhing is configured in one file, means usually that one connects to the source code of all key components. That can be usefull if one is developing the source code itself. However if one would 
+
+
+### System requirements
 
 - Docker and Docker-compose installed.
 - Access to the internet
 
-## development
+### development
 Doing local development is possible, but one should replace the multidomains in Caddy  with a single localhost domain. This is to avoid that Caddy will try to register a certificate of the existing domains.
 The Makefile includes several localhost tests which allow to see the behaviour of the setup.
 
@@ -65,7 +73,11 @@ Caddy allows to extend it with caddy modules through Docker build instructions a
 Nginx has no standard way to extend is with modules through Docker. The instructions to include common modules into the docker images require to rebuild Nginx from source with the modules included.
 For that the Offical Nginx Docker build script has been copied into this repository. To build the uri.semic.eu Nginx first this images has to be build and then the configured Nginx will be build.
 
+The command `make my-nginx` contains the statements to build an Docker image for Nginx with the additional modules included. This results in a new base Nginx image with an empty configuration. This image is used to build the uri-semic-eu-proxy image containing the proxy rules for uri-semic-eu. 
+
 Updating the proxies to more recent versions to remove security treats is done by rebuilding the container images and bumping where required the version numbers in the Dockerfile configurations. 
+
+
 
 ## common activities
 
@@ -87,6 +99,8 @@ Updating the proxies to more recent versions to remove security treats is done b
 1. Copy the nginx configuration for the domain [m8g](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/urisemic.nginx.conf.d#L145) to {REF} in the [config file](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/urisemic.nginx.conf.d) and adapt all occurences of m8g in the copied block to {REF}.
 2. Add the data for each PURI in domain {REF} as described above
 3. Redeploy the new configuration on the uri.semic.eu VM
+
+
 
 ## TODO
 
