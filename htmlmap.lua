@@ -34,6 +34,7 @@ _M.htmlmap = {
   [ "/m8g/isDefinedBy" ] = " ",
   [ "/m8g/isDescribedAt" ] = " ",
   [ "/m8g/isGroupedBy" ] = " ",
+  [ "/m8g/isProvidedBy" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Evidence%3Ais%20provided%20by",
   [ "/m8g/isRequirementOf" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Requirement%3Ais%20requirement%20of",
   [ "/m8g/isSpecifiedIn" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#isSpecifiedIn",
   [ "/m8g/LifeEvent" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
