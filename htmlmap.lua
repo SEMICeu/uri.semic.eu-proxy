@@ -102,7 +102,8 @@ _M.htmlmap = {
   [ "/m8g/validFrom" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Opening%20Hours%20Specification%3Avalid%20from",
   [ "/m8g/validThrough" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Opening%20Hours%20Specification%3Avalid%20through",
   [ "/m8g/contactPoint" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation%3Acontact%20point",
-  [ "/m8g/logo" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation%3Alogo"
+  [ "/m8g/logo" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation%3Alogo",
+  [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Identifier%3Aidentifies"
   }
 
 return _M
