@@ -77,8 +77,14 @@ _M.htmlmap = {
   [ "/r5r/availability/experimental" ] = "http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL",
   [ "/r5r/availability/available" ] = "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE",
   [ "/r5r/availability/stable" ] = "http://publications.europa.eu/resource/authority/planned-availability/STABLE",
-  [ "/p4s/xml/PERSON" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person"
-
+  [ "/p4s/xml/PERSON" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person",
+  [ "/m8g/additionalAdminUnit" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Address%3Aadditional%20administrative%20unit",
+  [ "/m8g/AdminUnit" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Administrative%20Unit",
+  [ "/m8g/code" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Administrative%20Unit%3Acode",
+  [ "/m8g/level" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Administrative%20Unit%3Alevel",
+  [ "/m8g/coordinates" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Acoordinates",
+  [ "/m8g/address" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Resource%3Aaddress",
+  [ "/m8g/location" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Resource%3Alocation"
   }
 
 return _M
