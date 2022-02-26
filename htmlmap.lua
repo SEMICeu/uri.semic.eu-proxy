@@ -84,7 +84,12 @@ _M.htmlmap = {
   [ "/m8g/level" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Administrative%20Unit%3Alevel",
   [ "/m8g/coordinates" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Acoordinates",
   [ "/m8g/address" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Resource%3Aaddress",
-  [ "/m8g/location" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Resource%3Alocation"
+  [ "/m8g/location" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Resource%3Alocation",
+  [ "/m8g/birthDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Adate%20of%20birth",
+  [ "/m8g/deathDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Adate%20of%20death",
+  [ "/m8g/domicile" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Adomicile",
+  [ "/m8g/gender" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Agender",
+  [ "/m8g/matronymicName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Amatronymic%20name"
   }
 
 return _M
