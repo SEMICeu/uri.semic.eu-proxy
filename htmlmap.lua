@@ -89,7 +89,20 @@ _M.htmlmap = {
   [ "/m8g/deathDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Adate%20of%20death",
   [ "/m8g/domicile" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Adomicile",
   [ "/m8g/gender" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Agender",
-  [ "/m8g/matronymicName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Amatronymic%20name"
+  [ "/m8g/matronymicName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Amatronymic%20name",
+  [ "/m8g/hasFormalFramework" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Change%20Event%3Ahas%20formal%20framework",
+  [ "/m8g/ContactPoint" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Contact%20Point",
+  [ "/m8g/hoursAvailable" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Contact%20Point%3Aavailability%20restriction",
+  [ "/m8g/email" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Contact%20Point%3Ahas%20email",
+  [ "/m8g/telephone" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Contact%20Point%3Ahas%20telephone",
+  [ "/m8g/openingHours" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Contact%20Point%3Aopening%20hours",
+  [ "/m8g/ImageObject" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Image%20Object",
+  [ "/m8g/OpeningHoursSpecification" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Opening%20Hours%20Specification",
+  [ "/m8g/dayOfWeek" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Opening%20Hours%20Specification%3Aday%20of%20week",
+  [ "/m8g/validFrom" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Opening%20Hours%20Specification%3Avalid%20from",
+  [ "/m8g/validThrough" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Opening%20Hours%20Specification%3Avalid%20through",
+  [ "/m8g/contactPoint" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation%3Acontact%20point",
+  [ "/m8g/logo" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation%3Alogo"
   }
 
 return _M
