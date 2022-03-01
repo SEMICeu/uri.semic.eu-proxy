@@ -462,7 +462,7 @@ server {
 		     else
 			    -- point to a default html page on the core vocs
 --			    uri = ngx.re.sub(entity_noextension, "^/r5r/(.*)", "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies", "o")
-			    uri = "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies"
+			    uri = "https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe"
 		    end
               end
          end
