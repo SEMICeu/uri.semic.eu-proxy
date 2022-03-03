@@ -89,6 +89,7 @@ _M.htmlmap = {
   [ "/m8g/deathDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Adate%20of%20death",
   [ "/m8g/domicile" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Adomicile",
   [ "/m8g/gender" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Agender",
+  [ "/m8g/Date" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/context/core-person.jsonld"
   [ "/m8g/matronymicName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Amatronymic%20name",
   [ "/m8g/hasFormalFramework" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Change%20Event%3Ahas%20formal%20framework",
   [ "/m8g/ContactPoint" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Contact%20Point",
