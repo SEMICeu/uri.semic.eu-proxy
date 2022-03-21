@@ -17,6 +17,11 @@ It consists of 2 proxies which are chained after each-other.
 The Internet facing proxy is a Caddy instance. This has been chosen for its out-of the box tls (https) support.
 The Caddy proxy forwards all traffic to a Nginx. This proxy implements all business logic.
 
+More reading:
+- https://caddyserver.com/
+- http://nginx.org/
+
+
 
 ### business logic design
 
@@ -51,12 +56,32 @@ The build and startup instructions are available in the [Makefile](https://githu
 
 One can monitor also the services by pulling the logs from the docker-compose. An example of the statement is found in the Makefile.
 
+More reading:
+- https://docs.docker.com/
+- https://docs.docker.com/compose/
+- https://git-scm.com/doc
+
+
 ### Prerequisite knowledge
 It is assumed that contributors are familiar with the HTTP protocol, proxies and Docker. Specific knowledge of the used proxies in this repository is not mandatory, but helpful. This knowledge can be (should be) acquired by reading the manuals. As the proxies are a living ecosystem, over time improvements or adapatations should be made to the configuration to have the most recent version of the proxies running.
 
-Knowledge about _containerization_ more specifically the Docker ecosystem is needed. The design is build on top of Docker to make the solution easy transferable to other systems. The commandline statements included in this repository are only explained to the level of their purpose in the realization of the desired functionality. Retrieving detailed semantics of the command and their parameters is up to the reader to look up in the manual on docker.
+Knowledge about _containerization_ more specifically the Docker ecosystem is needed. The design is build on top of Docker to make the solution easy transferable to other systems. The commandline statements included in this repository are only explained to the level of their purpose in the realization of the desired functionality. Retrieving detailed semantics of the command and their parameters is up to the reader to look up in the manual on Docker.
 
-One base aspect from Docker is the layering of images on top of eachother. This means that one extends one image with additional configuration to create a new image. This process is repeated over and over, crossing projects and organisations, to reach the desired image. The design of the layering is part of the architecture. It determines the key flexibility points. A centralistic approach where everyhing is configured in one file, means usually that one connects to the source code of all key components. That can be usefull if one is developing the source code itself. However if one would 
+Another principle is _Infrastructure as Code_. This forms the underlying principle for the design. Basically it means that the service is rebuildable and deployable based on the content of the repository requiring only minimal actions on the underlying system. In the past a long detailed manuals were provided describing step-by-step the commands to be typed in a terminal. These manuals documented the dependency checks, the configurations to make, ... in order to prepare the system for the service. With Infrastructure as Code this manual is replaced with scripts that are executed on the machine. 
+The term orginates from cloud environments which use APIs to deploy infrastructure components such as processors, diskspaces, networks, etc. By designed a language around these API's the infrastructure is described as code. In here, it means all services are containerized (Docker) and interconnected using Docker-compose. With that knowledge the complete service is described and a step-by-step manual does not need to be maintained. 
+
+One base aspect from Docker is the layering of images on top of eachother. This means that one extends one image with additional configuration to create a new image. This process is repeated over and over, crossing projects and organisations, to reach the desired image. The design of the layering is part of the architecture. It determines the key flexibility points. A centralistic approach where everything is configured in one file, means usually that one connects to the source code of all key components. That can be useful if one is developing the source code itself. However if one would would like to take new functionalities or security patches into account then these layering approach is incredible helpful to propagate changes in a controlled way. It is recommended to start from "official" images, these are images managed by the service/software provider/community.
+
+
+
+More reading:
+- https://caddyserver.com/
+- http://nginx.org/
+- https://docs.docker.com/
+- https://docs.docker.com/compose/
+- https://git-scm.com/doc
+- https://en.wikipedia.org/wiki/Infrastructure_as_code
+
 
 
 ### System requirements
