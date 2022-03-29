@@ -29,7 +29,7 @@ All subdomain traffic is forwarded to the handling service on a port different f
 Deploying any other public facing service must be made public on such port. 
 
 Any forwarded data.europa.eu/{REF} domain that is used to mint PURIs has to be handled on the domain uri.semic.eu under the path {REF}.
-In the programming language lua (the default and well integrated programming language for Nginx) a dedicated extension has been written to support machine readible content negotation.
+In the programming language lua (the default and well integrated programming language for Nginx) a dedicated extension has been written to support machine readible content negotation. All source code is in this repository.
 It will convert any request on the path {REF} based on the Accept header and the eventual filename extension present to a target URL.
 This target URL can either correspond to a path in the repository https://github.com/SEMICeu/uri.semic.eu-puris or a URL targeting the html representation.
 Because the html representation of the URI is not yet harmonised in one place, there is a mapping table that will forward the requests to the target url.
@@ -38,7 +38,7 @@ Because the html representation of the URI is not yet harmonised in one place, t
 The implemented rules for mapping a PURI to the URL are
   
   - If the URL is of the form http(s)://uri.semic.eu/{REF}/{entitypath}.{extension} 
-     - if the extension is a supported extension, return the data in the form of the extension 
+     - if the extension is a [supported extension](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/urisemic.lua#L42), return the data in the form of the extension 
   - If the URL is requested with HTTP header _Accept_
      - if the value of the header is one of the supported headers, return the data in the form of the accept header
   Otherwise return the html version according to the mapping table [htmlmap.lua](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/htmlmap.lua).
@@ -90,7 +90,7 @@ More reading:
 - Access to the internet
 
 ### development
-Doing local development is possible, but one should replace the multidomains in Caddy  with a single localhost domain. This is to avoid that Caddy will try to register a certificate of the existing domains.
+Doing local development is possible, but one should replace the [uri.semic.eu](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/semic.Caddyfile#L22) domain in Caddy with `localhost` domain. This is to avoid that Caddy will try to register a certificate of the existing domains.
 The Makefile includes several localhost tests which allow to see the behaviour of the setup.
 
 Both the Caddy and the Nginx are variants of their official Docker images. This is because they require some modules to be activated.
@@ -108,10 +108,12 @@ Updating the proxies to more recent versions to remove security treats is done b
 
 ### redeploy a new configuration on the uri.semic.eu VM:
 1. login on the uri.semic.eu VM 
-2. goto to the location where this repository is checked out (/home/admin/proxy) 
-3. pull the new content from github or adapt locally the configuration. Local adapations should be committed and pushed to github.
-4. Build a new nginx container: `make nginx`
-5. Restart the docker-compose setup to use the newly build nginx container: `make run`
+2. goto to the location where this repository is checked out (currently it is /home/admin/proxy) 
+3. pull the new content from github or adapt if required locally the configuration. Local adapations should be committed and pushed to github.
+4. Build a new nginx container: `make nginx` (*)
+5. Restart the docker-compose setup to use the newly build nginx container: `make run` (*)
+
+(*) ensure you have sufficient rights. It might be required to execute the statements as superuser (`sudo`).
 
 ### adding a new PURI
 1. For each new PURI in an existing domain the following steps must be done to make the PURI resolveable:
