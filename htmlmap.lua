@@ -106,7 +106,8 @@ _M.htmlmap = {
   [ "/m8g/logo" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation%3Alogo",
   [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Identifier%3Aidentifies",
   [ "/m8g/hasValue" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Cost%3Avalue",
-  [ "/m8g/contactPage" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Contact%20Point%3Acontact%20page" 
+  [ "/m8g/contactPage" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Contact%20Point%3Acontact%20page",
+  [ "/m8g/PeriodOfTime" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Period%20of%20Time"
   }
 
 return _M
