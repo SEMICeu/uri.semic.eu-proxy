@@ -129,7 +129,7 @@ server {
     }
 
     location /geodcatap {
-        rewrite ^/(.*)$ https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/ redirect;
+        rewrite ^/(.*)$ https://semiceu.github.io/GeoDCAT-AP/releases/ redirect;
     }
 
     location /fts {
