@@ -3,8 +3,8 @@ local _M = {}
 _M.htmlmap = {
 
   [ "/m8g/bias" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Criterion%3Abias",
-  [ "/m8g/BusinessEvent" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
-  [ "/m8g/Channel" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
+  [ "/m8g/BusinessEvent" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Business%20Event",
+  [ "/m8g/Channel" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Channel",
   [ "/m8g/confidentialityLevelType" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Evidence%3Aconfidentiality%20level%20type",
   [ "/m8g/constrains" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Constraint%3Aconstrains",
   [ "/m8g/Constraint" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Constraint",
@@ -47,10 +47,10 @@ _M.htmlmap = {
   [ "/m8g/issuingPlace" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Evidence%20Type%3Aissuing%20place",
   [ "/m8g/LifeEvent" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
   [ "/m8g/Output" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
-  [ "/m8g/ownedBy" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
+  [ "/m8g/ownedBy" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Channel%3Aowned%20by",
   [ "/m8g/Participation" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
-  [ "/m8g/playsRole" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
-  [ "/m8g/processingTime" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
+  [ "/m8g/playsRole" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Agent%3Aplays%20role",
+  [ "/m8g/processingTime" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Channel%3Aprocessing%20time",
   [ "/m8g/providesValueFor" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Supported%20Value%3Aprovides%20value%20for",
   [ "/m8g/PublicOrganisation" ] = "https://semiceu.github.io/CPOV/releases/2.00/#Public%20Organisation",
   [ "/m8g/PublicServiceDataset" ] = "https://github.com/catalogue-of-services-isa/CPSV-AP/tree/master/releases/2.2.1",
@@ -107,7 +107,12 @@ _M.htmlmap = {
   [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Identifier%3Aidentifies",
   [ "/m8g/hasValue" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Cost%3Avalue",
   [ "/m8g/contactPage" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Contact%20Point%3Acontact%20page",
-  [ "/m8g/PeriodOfTime" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Period%20of%20Time"
+  [ "/m8g/PeriodOfTime" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Period%20of%20Time",
+  [ "/m8g/specialOpeningHoursSpecification" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Channel%3Aavailability%20restriction",
+  [ "/m8g/ConcessionContract" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Concession%20Contract",
+  [ "/m8g/establishedUnder" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Concession%20Contract%3Aestablished%20under",
+  [ "/m8g/hasContractingAuthority" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Concession%20Contract%3Ahas%20contracting%20authority",
+  [ "/m8g/hasEconomicOperator" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Concession%20Contract%3Ahas%20economic%20operator"
   }
 
 return _M
