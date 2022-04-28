@@ -113,7 +113,8 @@ _M.htmlmap = {
   [ "/m8g/establishedUnder" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Concession%20Contract%3Aestablished%20under",
   [ "/m8g/hasContractingAuthority" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Concession%20Contract%3Ahas%20contracting%20authority",
   [ "/m8g/hasEconomicOperator" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Concession%20Contract%3Ahas%20economic%20operator",
-  [ "/m8g/holdsRequirement" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Public%20Service%3Aholds%20requirement"
+  [ "/m8g/holdsRequirement" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Public%20Service%3Aholds%20requirement",
+  [ "/m8g/fulfils" ] = "https://catalogue-of-services-isa.github.io/CPSV-AP/releases/3.0.0/#Requirement%3Afulfils"
   }
 
 return _M
