@@ -1,6 +1,8 @@
 # uri.semic.eu-proxy
-The proxy setup for uri.semic.eu
+The proxy setup for uri.semic.eu. 
+This repository contains the software code for the proxy setup, while the repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) is the data repository being served by the proxy.
 
+Most of the documentation is developer oriented; editors are though invited to read the section on [updating the content](#common-activities).
 
 This repository creates a proxy setup for uri.semic.eu.
 It has support for 
@@ -103,6 +105,27 @@ The command `make my-nginx` contains the statements to build an Docker image for
 Updating the proxies to more recent versions to remove security treats is done by rebuilding the container images and bumping where required the version numbers in the Dockerfile configurations. 
 
 
+| SystemComponent | file | purpose |
+| --- | --- | --- |
+| Global | dockercompose.yml | the complete system |
+| Global | Makefile | commands to build, test, run the system and components| 
+| Caddy | Dockerfile.caddy | The container configuration for Caddy |
+| Caddy | semic.Caddyfile | the proxy configuration for Caddy |
+| Nginx | Dockerfile.nginx | the container configuration for Nginx |
+| Nginx | urisemic.lua | supporting lua code for the content negotation |
+| Nginx | urisemic.mime.types | the mime types support table |
+| Nginx | urisemic.nginx.conf | the global Nginx configuration |
+| Nginx | urisemic.nginx.conf.d | the specific Nginx configuration handling the different domains |
+| Nginx | my-nginx | the directory containing the official Docker image configuration with lua enabled |
+| Nginx | htmlmap.lua |  the mapping of puris on their html version |
+| Nginx | robots.txt | the robots.txt file served by Nginx |
+
+
+Developers MUST follow the _infrastructure as code_ principle while making changes. 
+This means any configuration change must be committed to the appropriate source code file. 
+In particular any change to the globale system setup should be expressed as part of the dockercompose.yml file.
+
+
 
 ## common activities
 
@@ -134,9 +157,9 @@ Updating the proxies to more recent versions to remove security treats is done b
 1. activate autorestart when VM restarts
 2. improvements on the URL processing:
      - support for Accept header qs and level specifications (low usage though)
-3. infrastrure as code (improved service management)
+3. infrastructure as code (improved service management)
      (**rescue docker image storage**)
-     Although the Docker containers are build from official Docker images, low maintenance activity might reside in a situation in which the deployed version is not anymore supported and available. And that the Docker image cannot be rebuilt. To avoid long downtime in the case where the uri.semic.eu VM looses the docker images (which are stored in the VM disk) and the docker containers cannot be immediately rebuilt from this repository the docker images should be pushed to an external docker container repository. In that case downtime can be reduced by pulling the latest built image from that repository. This activity is a step towards implementing the uri.semic.eu VM by the _infracture as code_ principle.         
+     Although the Docker containers are build from official Docker images, low maintenance activity might reside in a situation in which the deployed version is not anymore supported and available. And that the Docker image cannot be rebuilt. To avoid long downtime in the case where the uri.semic.eu VM looses the docker images (which are stored in the VM disk) and the docker containers cannot be immediately rebuilt from this repository the docker images should be pushed to an external docker container repository. In that case downtime can be reduced by pulling the latest built image from that repository. This activity is a step towards implementing the uri.semic.eu VM by the _infrastructure as code_ principle.         
 4. activate robots.txt in all subdomains  
 
 
