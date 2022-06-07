@@ -80,14 +80,61 @@ server {
 #    }
 #}
 
+map $http_x_forwarded_for $allowed {
+    default       off;
+    # emidio
+    92.91.74.215  on;
+    # louis
+    # local
+    63.32.50.253  on;
+}
 
 server {
     listen       80;
     server_name  cpsv-ap.semic.eu;
 
-   location / {
 
-	     rewrite ^/(.*)$ http://cpsv-ap.semic.eu:81/$1 redirect;
+    location /jenkins {
+            if ($allowed = off) {
+               return 403;
+            }
+	    proxy_pass         "http://host.docker.internal:8181/jenkins" ;
+            proxy_redirect     off;
+            proxy_set_header   Host $http_host;
+            proxy_set_header   X-Real-IP $remote_addr;
+            proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header   X-Forwarded-Proto $scheme;
+            proxy_set_header   X-NginX-Proxy true;
+    }
+
+
+    location /cpsv-ap_editor {
+            proxy_pass "http://host.docker.internal:83/cpsv-ap_editor" ;
+    }
+
+    location /cpsv-ap_harvester {
+            proxy_pass "http://host.docker.internal:84/cpsv-ap_harvester/" ;
+    }
+
+    location /intapi {
+            if ($allowed = off) {
+               return 403;
+            }
+            proxy_pass "http://host.docker.internal:84/intapi" ;
+    }
+    
+    location /pubapi {
+            if ($allowed = off) {
+               return 403;
+            }
+            proxy_pass "http://host.docker.internal:84/api" ;
+    }
+
+    location / {
+            if ($allowed = off) {
+               return 403;
+            }
+	    proxy_pass "https://host.docker.internal:5000/" ;
 
     }
 }
