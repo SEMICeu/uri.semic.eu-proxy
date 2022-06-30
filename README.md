@@ -17,7 +17,10 @@ The system may handle also optionally
 
 It consists of 2 proxies which are chained after each-other.
 The Internet facing proxy is a Caddy instance. This has been chosen for its out-of the box tls (https) support.
-The Caddy proxy forwards all traffic to a Nginx. This proxy implements all business logic.
+The Caddy proxy forwards all traffic to a Nginx. 
+The purpose of the Caddy proxy is to perform on tls support for each handled subdomain.
+The Nginx proxy implements all business logic.
+The Caddy proxy does not contain any domain specific logic or rules. 
 
 More reading:
 - https://caddyserver.com/
@@ -25,10 +28,9 @@ More reading:
 
 
 
-### business logic design
+### business logic design PURI service
 
-All subdomain traffic is forwarded to the handling service on a port different from 80 or 443.
-Deploying any other public facing service must be made public on such port. 
+The PURI service is implemented directly in the NginX. 
 
 Any forwarded data.europa.eu/{REF} domain that is used to mint PURIs has to be handled on the domain uri.semic.eu under the path {REF}.
 In the programming language lua (the default and well integrated programming language for Nginx) a dedicated extension has been written to support machine readible content negotation. All source code is in this repository.
@@ -36,14 +38,28 @@ It will convert any request on the path {REF} based on the Accept header and the
 This target URL can either correspond to a path in the repository https://github.com/SEMICeu/uri.semic.eu-puris or a URL targeting the html representation.
 Because the html representation of the URI is not yet harmonised in one place, there is a mapping table that will forward the requests to the target url.
 
-### implemented rules
+### implemented rules PURI service
 The implemented rules for mapping a PURI to the URL are
   
   - If the URL is of the form http(s)://uri.semic.eu/{REF}/{entitypath}.{extension} 
      - if the extension is a [supported extension](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/urisemic.lua#L42), return the data in the form of the extension 
   - If the URL is requested with HTTP header _Accept_
-     - if the value of the header is one of the supported headers, return the data in the form of the accept header
-  Otherwise return the html version according to the mapping table [htmlmap.lua](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/htmlmap.lua).
+     - if the value of the header is one of the supported headers, return the data in the form of the accept header.
+  - Otherwise return the html version according to the mapping table [htmlmap.lua](https://github.com/SEMICeu/uri.semic.eu-proxy/blob/main/htmlmap.lua).
+  
+The mapping table is a mapping of the URL, identified with {REF}/{entitypath},  to the HTML document where the information of the URL is found.
+Best practice is to be as precise as possible: thus refer to a section within the HTML document instead to the whole document.
+
+### business logic design non PURI service
+
+Since the tls-terminator (Caddy) is the sole access point to the SEMIC VM, also all trafic for other services is passing through it.
+In this design the NginX is the proxy that will implement the public facing business logic for these services (by applying forward or reverse proxing).
+
+To minimally disturbe the existing configuration deployed on the SEMIC VM, the Nginx implements the necessary proxy rules to the public facing services. 
+Some of these public facing services are reachable on different ports than 80 or 443. 
+To increase security this should be replaced with a proper access on the right subdomain on port 80 or 443.w
+
+
 
 ## Deployment
 The configuration and setup is dockerized and thus can easily deployed on any virtual machine having access to the internet. 
@@ -154,12 +170,17 @@ In particular any change to the globale system setup should be expressed as part
 
 ## TODO
 
-1. activate autorestart when VM restarts
+1. activate autorestart when VM restarts:
+    Any VM restart would require to restart the docker services. To reduce the current require manual intervention, this should be automated.
 2. improvements on the URL processing:
-     - support for Accept header qs and level specifications (low usage though)
+     - support for Accept header qs and level specifications (low usage though) See [RFC2616](https://datatracker.ietf.org/doc/html/rfc2616).
 3. infrastructure as code (improved service management)
      (**rescue docker image storage**)
-     Although the Docker containers are build from official Docker images, low maintenance activity might reside in a situation in which the deployed version is not anymore supported and available. And that the Docker image cannot be rebuilt. To avoid long downtime in the case where the uri.semic.eu VM looses the docker images (which are stored in the VM disk) and the docker containers cannot be immediately rebuilt from this repository the docker images should be pushed to an external docker container repository. In that case downtime can be reduced by pulling the latest built image from that repository. This activity is a step towards implementing the uri.semic.eu VM by the _infrastructure as code_ principle.         
+     - (risk 1 - used Docker images cannot be build) Although the Docker containers are build from official Docker images, low maintenance activity might reside in a situation in which the deployed version is not anymore supported and available. And that the Docker image cannot be rebuilt.
+     - (risk 2 - downtown to loosing the cached Docker images) To avoid long downtime in the case where the uri.semic.eu VM looses the docker images (which are stored on the VM disk) and the docker containers cannot be immediately rebuilt from this repository the docker images should be pushed to an external docker container repository.
+       In that case downtime can be reduced by pulling the latest built image from that repository.
+       The risk mitigation to introduce a SEMIC maintained Docker repository is a further step towards implementing the uri.semic.eu VM by the _infrastructure as code_ principle.         
+
 4. activate robots.txt in all subdomains  
 
 
