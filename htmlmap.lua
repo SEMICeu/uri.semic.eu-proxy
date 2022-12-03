@@ -116,7 +116,7 @@ _M.htmlmap = {
   [ "/m8g/holdsRequirement" ] = "https://semiceu.github.io/CPSV-AP/releases/3.0.0/#Public%20Service%3Aholds%20requirement",
   [ "/m8g/fulfils" ] = "https://semiceu.github.io/CPSV-AP/releases/3.0.0/#Requirement%3Afulfils",
   [ "/m8g/baptismalName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/#Person%3Abaptismal%20name",
-  [ "/m8g/latitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/Geometry%3Alatitude",
+  [ "/m8g/latitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Alatitude",
   }
 
 return _M
