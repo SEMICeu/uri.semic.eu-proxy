@@ -120,7 +120,8 @@ _M.htmlmap = {
   [ "/m8g/longitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Alongitude",
   [ "/m8g/geometryType" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Ageometry%20type",
   [ "/m8g/crs" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Acrs",
-  [ "/m8g/registeredAddress" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Resource%3Aregistered%20address"
+  [ "/m8g/registeredAddress" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1/#Resource%3Aregistered%20address",
+  [ "/m8g/frequency" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/Temporal%20Entity%3Afrequency"
   }
 
 return _M
