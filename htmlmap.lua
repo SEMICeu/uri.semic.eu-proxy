@@ -134,6 +134,10 @@ _M.htmlmap = {
   [ "/m8g/format" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Aformat",
   [ "/m8g/registrationPage" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Aregistration%20page",
   [ "/m8g/hasParticipant" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Participation%3AhasParticipant",
+  [ "/m8g/hasInputType" ] = "https://semiceu.github.io/CPSV-AP/releases/3.1.0/#Public%20Service%3Ahas%20input%20type",
+  [ "/m8g/ServiceConcessionContract" ] = "https://semiceu.github.io/CPSV-AP/releases/1.0.0/#Service%20Concession%20Contract",
+  [ "/m8g/hasRelatedService" ] = "https://semiceu.github.io/CPSV-AP/releases/1.0.0/#Event%3Ahas%20related%20service",
+  [ "/m8g/relatedService" ] = "https://semiceu.github.io/CPSV-AP/releases/1.0.0/#Public%20Service%3Arelated%20service",
   
   }
 
