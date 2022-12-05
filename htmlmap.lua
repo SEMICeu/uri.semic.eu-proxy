@@ -121,7 +121,20 @@ _M.htmlmap = {
   [ "/m8g/geometryType" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Ageometry%20type",
   [ "/m8g/crs" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.00/#Geometry%3Acrs",
   [ "/m8g/registeredAddress" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1/#Resource%3Aregistered%20address",
-  [ "/m8g/frequency" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/#Temporal%20Entity%3Afrequency"
+  [ "/m8g/frequency" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/#Temporal%20Entity%3Afrequency",
+  [ "/m8g/participates" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Agent%3Aparticipates",
+  [ "/m8g/accessibility" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Aaccessibility",
+  [ "/m8g/subEvent" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Asub%20event",
+  [ "/m8g/audience" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Aaudience",
+  [ "/m8g/hasPreviousEvent" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Ahas%20previous%20event",
+  [ "/m8g/hasNextEvent" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Ahas%20next%20event",
+  [ "/m8g/eventNumber" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3AeventNumber",
+  [ "/m8g/PublicEvent" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event",
+  [ "/m8g/parentEvent" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Aparent%20event",
+  [ "/m8g/format" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Aformat",
+  [ "/m8g/registrationPage" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Public%20Event%3Aregistration%20page",
+  [ "/m8g/hasParticipant" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.0.0/#Participation%3AhasParticipant",
+  
   }
 
 return _M
