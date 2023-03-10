@@ -215,6 +215,16 @@ server {
 	 local uri_notrailingslash = ngx.var.uri
 	 local uri_notrailingslashtest, err =  ngx.re.match(uri, ".*/$", "")
 
+	 if uri == "/m8g" then
+	       return ngx.redirect(uri .. "/m8g")
+         end
+	 if uri == "/m8g/" then
+	       return ngx.redirect(uri .. "m8g")
+         end
+
+
+
+
          -- remove trailing slash and extension
 	 -- start
 	 if uri_notrailingslashtest then
@@ -285,7 +295,8 @@ server {
 		     else
 			    -- point to a default html page on the core vocs
 --			    uri = ngx.re.sub(entity_noextension, "^/m8g/(.*)", "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies", "o")
-			    uri = "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies"
+--			    uri = "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies"
+			    uri = "https://raw.githubusercontent.com/SEMICeu/uri.semic.eu-puris/main/releases/m8g/m8g.ttl"
 		    end
               end
          end
