@@ -137,6 +137,8 @@ _M.htmlmap = {
   [ "/m8g/ServiceConcessionContract" ] = "https://semiceu.github.io/CPSV-AP/releases/3.1.0/#Service%20Concession%20Contract",
   [ "/m8g/hasRelatedService" ] = "https://semiceu.github.io/CPSV-AP/releases/3.1.0/#Event%3Ahas%20related%20service",
   [ "/m8g/relatedService" ] = "https://semiceu.github.io/CPSV-AP/releases/3.1.0/#Public%20Service%3Arelated%20service",
+  [ "/m8g/AccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#AccountingDocument"
+
   
   }
 
