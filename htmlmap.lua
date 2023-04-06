@@ -140,6 +140,7 @@ _M.htmlmap = {
   [ "/m8g/AccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#AccountingDocument",
   [ "/m8g/GenericDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#GenericDate",
   [ "/m8g/sex" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Asex",
+  [ "/m8g/hasAccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AhasAccountingDocument",
   [ "/m8g/registrationDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AregistrationDate"
   
   }
