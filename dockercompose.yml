@@ -6,6 +6,9 @@ services:
       APP_SERVER1: http://proxy
       DOMAIN1: uri.semic.eu
       EMAIL1: bert.van.nuffelen@tenforce.com
+      APP_SERVER2: http://proxy
+      DOMAIN2: wikibase.semic.eu
+      EMAIL1: bert.van.nuffelen@tenforce.com
     image: cad
     ports:
       - "80:80"
