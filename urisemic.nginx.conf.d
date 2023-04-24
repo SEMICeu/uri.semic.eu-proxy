@@ -646,10 +646,8 @@ server {
 		     if htmlmap.htmlmap[entity_noextension] then
 			    uri = htmlmap.htmlmap[entity_noextension]
 		     else
-			    -- point to a default html page on the core vocs
---			    uri = ngx.re.sub(entity_noextension, "^/w3c/(.*)", "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies", "o")
---			    uri = "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies"
-			    uri = "https://raw.githubusercontent.com/SEMICeu/uri.semic.eu-puris/main/releases/w3c/ns/adms.ttl"
+			    -- point to a default html page 
+			    uri = "https://semiceu.github.io/ADMS/releases/2.00"
 		    end
               end
          end
