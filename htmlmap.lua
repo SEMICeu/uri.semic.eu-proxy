@@ -141,7 +141,10 @@ _M.htmlmap = {
   [ "/m8g/GenericDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#GenericDate",
   [ "/m8g/sex" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Asex",
   [ "/m8g/hasAccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AhasAccountingDocument",
-  [ "/m8g/registrationDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AregistrationDate"
+  [ "/m8g/registrationDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AregistrationDate",
+  [ "/w3c/ns/adms" ] = "https://semiceu.github.io/ADMS/releases/2.00",
+  [ "/w3c/ns/locn" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/",
+  [ "/w3c/ns/person" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/w3c/"
   
   }
 
