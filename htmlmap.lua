@@ -103,7 +103,7 @@ _M.htmlmap = {
   [ "/m8g/validThrough" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/#Opening%20Hours%20Specification%3Avalid%20through",
   [ "/m8g/contactPoint" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/#Public%20Organisation%3Acontact%20point",
   [ "/m8g/logo" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/#Public%20Organisation%3Alogo",
-  [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/#Identifier%3Aidentifies",
+  [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#Identifier%3Aidentifies",
   [ "/m8g/hasValue" ] = "https://semiceu.github.io/CPSV-AP/releases/3.0.0/#Cost%3Avalue",
   [ "/m8g/contactPage" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/#Contact%20Point%3Acontact%20page",
   [ "/m8g/PeriodOfTime" ] = "https://semiceu.github.io/CCCEV/releases/2.00/#Period%20of%20Time",
@@ -145,7 +145,7 @@ _M.htmlmap = {
   [ "/w3c/ns/adms" ] = "https://semiceu.github.io/ADMS/releases/2.00",
   [ "/w3c/ns/locn" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/",
   [ "/w3c/ns/person" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/w3c/",
-  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00"
+  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0"
 
   
   }
