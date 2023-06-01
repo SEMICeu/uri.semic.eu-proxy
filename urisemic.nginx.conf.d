@@ -2,34 +2,111 @@
 
 server {
     listen       80;
+    listen       8890;
     server_name  geodcat-ap.semic.eu;
 
-    location / {
+    resolver 127.0.0.11 valid=10s;
+    resolver_timeout 5s; 
+    
+    proxy_busy_buffers_size   512k;
+    proxy_buffers   4 512k;
+    proxy_buffer_size   256k;
 
-	     rewrite ^/(.*)$ http://geodcat-ap.semic.eu:8890/$1 redirect;
-
+    location /csw-4-web {
+	proxy_pass http://csw4web ;
+#        proxy_pass "http://host.docker.internal:8891/csw-4-web" ;
     }
+
+    location  ~ /api(/?.*) {
+        set $match $1;
+
+    rewrite_by_lua_block {
+         ngx.log(ngx.WARN, ngx.var.match)
+    }
+
+	proxy_pass http://api$match$is_args$args; 
+    }
+
+    location ~ /skos-match-viewer(/?.*) {
+        set $match $1;
+
+    rewrite_by_lua_block {
+         ngx.log(ngx.WARN, ngx.var.match)
+    }
+	proxy_pass http://skosmatchviewer$match$is_args$args ;
+    }
+
+    location ~ /geoiri(/?.*) {
+        set $match $1;
+
+    rewrite_by_lua_block {
+         ngx.log(ngx.WARN, ngx.var.match)
+    }
+
+	proxy_pass  http://geoiri$match$is_args$args ;
+    }
+
+    location /id {
+
+	proxy_pass http://geoid ;
+    }
+
+#    location / {
+#
+#	     rewrite ^/(.*)$ http://geodcat-ap.semic.eu:8890/$1 redirect;
+#
+#    }
 }
 
 server {
     listen       80;
     server_name  mdr.semic.eu;
 
+#    location / {
+#
+#	     rewrite ^/(.*)$ http://mdr.semic.eu:81/$1 redirect;
+#
+#    }
+
+    resolver 127.0.0.11 valid=10s;
+    resolver_timeout 5s; 
+
     location / {
-
-	     rewrite ^/(.*)$ http://mdr.semic.eu:81/$1 redirect;
-
+       proxy_set_header Host mdr.semic.eu:81 ;
+#       proxy_set_header   Host $host;
+       proxy_pass http://virtuoso:81 ;
+       proxy_set_header   X-Real-IP $remote_addr;
+       proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+       proxy_set_header   X-Forwarded-Proto $scheme;
+       proxy_set_header   X-NginX-Proxy true;
+       proxy_redirect off;
     }
+
 }
 
 server {
     listen       80;
     server_name  mapping.semic.eu;
 
+#    location / {
+#
+#	     rewrite ^/(.*)$ http://mapping.semic.eu:81/$1 redirect;
+#
+#    }
+
+
+    resolver 127.0.0.11 valid=10s;
+    resolver_timeout 5s; 
+
     location / {
-
-	     rewrite ^/(.*)$ http://mapping.semic.eu:81/$1 redirect;
-
+       proxy_set_header Host mapping.semic.eu:81 ;
+#       proxy_set_header   Host $host;
+       proxy_pass http://virtuoso:81 ;
+       proxy_set_header   X-Real-IP $remote_addr;
+       proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+       proxy_set_header   X-Forwarded-Proto $scheme;
+       proxy_set_header   X-NginX-Proxy true;
+       proxy_redirect off;
     }
 }
 
@@ -37,9 +114,19 @@ server {
     listen       80;
     server_name  health.semic.eu;
 
-    location / {
+    resolver 127.0.0.11 valid=10s;
+    resolver_timeout 5s; 
 
-	     rewrite ^/(.*)$ http://health.semic.eu:81/$1 redirect;
+    location / {
+#proxy_set_header Host health.semic.eu:81 ;
+       proxy_set_header   Host $host;
+	proxy_pass http://virtuoso:81 ;
+            proxy_set_header   X-Real-IP $remote_addr;
+            proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header   X-Forwarded-Proto $scheme;
+                proxy_set_header   X-NginX-Proxy true;
+	proxy_redirect off;
+#	     rewrite ^/(.*)$ http://health.semic.eu:81/$1 redirect;
 
     }
 }
@@ -50,21 +137,78 @@ server {
 
     #  TODO: e-documents contains some more complex URI rewrite rules
 
+#    location / {
+#
+#	     rewrite ^/(.*)$ http://e-documents.semic.eu:8890/$1 redirect;
+#
+#    }
+
+
+# since the users might like to explore the whole content, they are forwarded to github.
+
     location / {
 
-	     rewrite ^/(.*)$ http://e-documents.semic.eu:8890/$1 redirect;
+    rewrite ^/(.*)$ https://github.com/SEMICeu/edm/ redirect;
 
     }
+
+
+
 }
 
 server {
     listen       80;
     server_name  dcat-ap.semic.eu;
 
-    location / {
+#
+# This subdomain is not any more used.
+# use it for testing geodcat-ap new docker services
 
-	     rewrite ^/(.*)$ http://dcat-ap.semic.eu:3031/$1 redirect;
 
+
+    resolver 127.0.0.11 valid=10s;
+    resolver_timeout 5s; 
+    
+    proxy_busy_buffers_size   512k;
+    proxy_buffers   4 512k;
+    proxy_buffer_size   256k;
+
+    location /csw-4-web {
+	proxy_pass http://csw4web ;
+    }
+
+    location  ~ /api(/?.*) {
+        set $match $1;
+
+    rewrite_by_lua_block {
+         ngx.log(ngx.WARN, ngx.var.match)
+    }
+
+	proxy_pass http://api$match$is_args$args; 
+    }
+
+    location ~ /skos-match-viewer(/?.*) {
+        set $match $1;
+
+    rewrite_by_lua_block {
+         ngx.log(ngx.WARN, ngx.var.match)
+    }
+	proxy_pass http://skosmatchviewer$match$is_args$args ;
+    }
+
+    location ~ /geoiri(/?.*) {
+        set $match $1;
+
+    rewrite_by_lua_block {
+         ngx.log(ngx.WARN, ngx.var.match)
+    }
+
+	proxy_pass  http://geoiri$match$is_args$args ;
+    }
+
+    location /id {
+
+	proxy_pass http://geoid ;
     }
 }
 
@@ -145,6 +289,11 @@ server {
 server {
     listen       80;
     server_name  uri.semic.eu;
+
+    resolver 127.0.0.11 valid=10s;
+    resolver_timeout 5s;
+
+    
 
 
     set $req_header "";
@@ -547,6 +696,9 @@ server {
     add_header 'Access-Control-Allow-Origin' '*';
     add_header 'Access-Control-Allow-Headers' 'Origin, X-Requested-With, Content-Type, Accept';
 
+
+    set $targetproxy "http://puris" ;
+
     rewrite_by_lua_block {
 	 local urisemic = require("urisemic")
 	 local htmlmap = require("htmlmap")
@@ -632,13 +784,15 @@ server {
 		derived_extension = reqext
 	    end
         
-             uri = ngx.re.sub(entity_noextension, "^/w3c/(.*)", "/uri.semic.eu-puris/main/releases/w3c/$1." .. derived_extension, "o")
+             uri = ngx.re.sub(entity_noextension, "^/w3c/(.*)", "/releases/w3c/$1." .. derived_extension, "o")
+--             uri = ngx.re.sub(entity_noextension, "^/w3c/(.*)", "/uri.semic.eu-puris/main/releases/w3c/$1." .. derived_extension, "o")
 			
          else
             -- check if there is a machine readible file extension
 
 	     if entity_extension ~= nil and urisemic.supportedext(entity_extension) then
-                uri = ngx.re.sub(entity_noextension, "^/w3c/(.*)", "/uri.semic.eu-puris/main/releases/w3c/$1." .. entity_extension, "o")
+                uri = ngx.re.sub(entity_noextension, "^/w3c/(.*)", "/releases/w3c/$1." .. entity_extension, "o")
+--                uri = ngx.re.sub(entity_noextension, "^/w3c/(.*)", "/uri.semic.eu-puris/main/releases/w3c/$1." .. entity_extension, "o")
              else 
 		 
 	 	     machineprocessable = false
@@ -657,7 +811,9 @@ server {
 	 if machineprocessable then
                ngx.log(ngx.WARN, uri)
                ngx.req.set_uri(uri)
-	       return ngx.redirect("https://raw.githubusercontent.com/SEMICeu/" .. uri)
+	       ngx.var.targetproxy = "http://puris" .. uri
+--
+--	       return ngx.redirect("https://raw.githubusercontent.com/SEMICeu/" .. uri)
 	 else
 	-- in case of html pages trigger redirect immediately
 	       ngx.log(ngx.WARN, uri)
@@ -665,7 +821,7 @@ server {
 	 end
 
      } 
-    proxy_pass  https://semiceu.github.io ;
+    proxy_pass  $targetproxy ;
 
     }
 		
