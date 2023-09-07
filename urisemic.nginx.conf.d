@@ -173,6 +173,10 @@ server {
     proxy_buffers   4 512k;
     proxy_buffer_size   256k;
 
+    location /cpsv-ap_editor {
+            proxy_pass http://cpsvap-editor ;
+    }
+
     location /csw-4-web {
 	proxy_pass http://csw4web ;
     }
