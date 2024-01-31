@@ -147,7 +147,10 @@ _M.htmlmap = {
   [ "/w3c/ns/adms" ] = "https://semiceu.github.io/ADMS/releases/2.00",
   [ "/w3c/ns/locn" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/",
   [ "/w3c/ns/person" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/w3c/",
-  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0"
+  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0",
+  [ "/m8g/core-location-ap" ] = "",
+  [ "/m8g/eventStatus" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.1.0/#PublicEvent.eventstatus",
+  [ "/m8g/expectedNumberOfParticipants" ] = "https://semiceu.github.io/Core-Public-Event-Vocabulary/releases/1.1.0/#PublicEvent.expectednumberofparticipants"
 
   
   }
