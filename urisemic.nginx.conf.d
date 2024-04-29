@@ -325,11 +325,13 @@ server {
     }
 
     location /statdcatap  {
-        rewrite ^/(.*)$ https://joinup.ec.europa.eu/solution/statdcat-application-profile-data-portals-europe redirect;
+    	    rewrite ^/(.*)$ https://semiceu.github.io/uri.semic.eu-generated/s1n/release/3.0.0 redirect;
+#    	    rewrite ^/(.*)$ https://joinup.ec.europa.eu/solution/statdcat-application-profile-data-portals-europe redirect;
     }
 
     location /geodcatap {
-        rewrite ^/(.*)$ https://semiceu.github.io/GeoDCAT-AP/releases/ redirect;
+        rewrite ^/(.*)$ https://semiceu.github.io/uri.semic.eu-generated/930/release/3.0.0  redirect;
+#        rewrite ^/(.*)$ https://semiceu.github.io/GeoDCAT-AP/releases/ redirect;
     }
 
     location /fts {
@@ -672,8 +674,8 @@ server {
 			    uri = htmlmap.htmlmap[entity_noextension]
 		     else
 			    -- point to a default html page on the core vocs
---			    uri = ngx.re.sub(entity_noextension, "^/r5r/(.*)", "https://joinup.ec.europa.eu/solution/e-government-core-vocabularies", "o")
-			    uri = "https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe"
+--			    uri = ngx.re.sub(entity_noextension, "^/r5r/(.*)", "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0", "o")
+			    uri = "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0"
 		    end
               end
          end

@@ -160,16 +160,16 @@ _M.htmlmap = {
   [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0",
 
   --r5r DCAT-AP
-  [ "/r5r/applicableLegislation" ] = "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0/#applicableLegislation",
-  [ "/r5r/availability" ] = "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0/#availability",
-  [ "/r5r/availability/available" ] = "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE",
-  [ "/r5r/availability/experimental" ] = "http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL",
-  [ "/r5r/availability/stable" ] = "http://publications.europa.eu/resource/authority/planned-availability/STABLE",
+  [ "/r5r/applicableLegislation" ] = "https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/#applicableLegislation",
+  [ "/r5r/hvdCategory" ] = "https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/#hvdCategory",
+  [ "/r5r/availability" ] = "https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/#availability",
   [ "/r5r/availability/temporary" ] = "http://publications.europa.eu/resource/authority/planned-availability/TEMPORARY",
-  [ "/r5r/hvdCategory" ] = "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0/#hvdCategory",
+  [ "/r5r/availability/experimental" ] = "http://publications.europa.eu/resource/authority/planned-availability/EXPERIMENTAL",
+  [ "/r5r/availability/available" ] = "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE",
+  [ "/r5r/availability/stable" ] = "http://publications.europa.eu/resource/authority/planned-availability/STABLE",
 
   --930 GeoDCAT-AP
-  ["/930/spatialResolutionAsText"] = "https://semiceu.github.io/uri.semic.eu-generated/930/release/3.0.0/#spatialResolutionAsText"
+  ["/930/spatialResolutionAsText"] = "https://semiceu.github.io/uri.semic.eu-generated/930/release/3.0.0/#spatialResolutionAsText",
 
   --REST
   [ "/m8g/hasAddress" ] = " ",
