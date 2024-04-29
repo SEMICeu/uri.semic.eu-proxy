@@ -148,11 +148,11 @@ _M.htmlmap = {
   [ "/p4s/xml/PERSON" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person",  
 
   --Core Business
-  [ "/m8g/AccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#AccountingDocument",
-  [ "/m8g/hasAccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AhasAccountingDocument",
-  [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#Identifier%3Aidentifies",
-  [ "/m8g/registrationDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0/#LegalEntity%3AregistrationDate",
-  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.1.0",
+  [ "/m8g/AccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#AccountingDocument",
+  [ "/m8g/hasAccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#LegalEntity.hasaccountingdocument",
+  [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#Identifier.identifies",
+  [ "/m8g/registrationDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#LegalEntity.registrationdate",
+  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0",
 
   --r5r DCAT-AP
   [ "/r5r/applicableLegislation" ] = "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0/#applicableLegislation",
