@@ -141,7 +141,7 @@ _M.htmlmap = {
   --Core Person
   [ "/m8g/birthDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.dateofbirth",
   [ "/m8g/Date" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Date",
-  [ "/m8g/deathDate" ] = "hhttps://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.dateofdeath",
+  [ "/m8g/deathDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.dateofdeath",
   [ "/m8g/domicile" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.domicile",
   [ "/m8g/gender" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.gender",
   [ "/m8g/GenericDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Genericdate",
