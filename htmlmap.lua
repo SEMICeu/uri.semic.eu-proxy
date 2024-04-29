@@ -135,17 +135,18 @@ _M.htmlmap = {
   [ "/m8g/core-location-ap" ] = "",
 
   --Core Person
-  [ "/m8g/baptismalName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Abaptismal%20name",
-  [ "/m8g/birthDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Adate%20of%20birth",
-  [ "/m8g/Date" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/context/core-person.jsonld",
-  [ "/m8g/deathDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Adate%20of%20death",
-  [ "/m8g/domicile" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Adomicile",
-  [ "/m8g/gender" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Agender",
-  [ "/m8g/GenericDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#GenericDate",
-  [ "/m8g/matronymicName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Amatronymic%20name",
-  [ "/m8g/sex" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Asex",
+  [ "/m8g/birthDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.dateofbirth",
+  [ "/m8g/Date" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Date",
+  [ "/m8g/deathDate" ] = "hhttps://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.dateofdeath",
+  [ "/m8g/domicile" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.domicile",
+  [ "/m8g/gender" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.gender",
+  [ "/m8g/GenericDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Genericdate",
+  [ "/m8g/matronymicName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.matronymicname",
+  [ "/m8g/sex" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.sex",
   [ "/w3c/ns/person" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/w3c/",
-  [ "/p4s/xml/PERSON" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person",  
+  [ "/p4s/xml/PERSON" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person",  
+  --Core Person deprecated
+  [ "/m8g/baptismalName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Abaptismal%20name",
 
   --Core Business
   [ "/m8g/AccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#AccountingDocument",
