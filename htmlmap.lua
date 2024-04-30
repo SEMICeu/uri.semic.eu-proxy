@@ -129,6 +129,7 @@ _M.htmlmap = {
   [ "/m8g/coordinates" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.coordinates",
   [ "/m8g/crs" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.crs",
   [ "/m8g/geometryType" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.geometrytype",
+  [ "/m8g/hasLocatorDesignator" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Address.haslocatordesignator",
   [ "/m8g/latitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.latitude",
   [ "/m8g/level" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#AdministrativeUnit.level",
   [ "/m8g/location" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.location",
