@@ -675,7 +675,7 @@ server {
 		     else
 			    -- point to a default html page on the core vocs
 --			    uri = ngx.re.sub(entity_noextension, "^/r5r/(.*)", "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0", "o")
-			    uri = "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0"
+			    uri = "https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/3.0.0/"
 		    end
               end
          end
