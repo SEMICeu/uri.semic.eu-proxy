@@ -914,12 +914,12 @@ it6              end
 		derived_extension = reqext
 	    end
         
-             uri = ngx.re.sub(entity_noextension, "^/r5r/(.*)", "/uri.semic.eu-puris/releases/r5r/$1." .. derived_extension, "o")
+             uri = ngx.re.sub(entity_noextension, "^/it6/(.*)", "/uri.semic.eu-puris/releases/it6/$1." .. derived_extension, "o")
          else
             -- check if there is a machine readible file extension
 
 	     if entity_extension ~= nil and urisemic.supportedext(entity_extension) then
-                uri = ngx.re.sub(entity_noextension, "^/r5r/(.*)", "/uri.semic.eu-puris/releases/r5r/$1." .. entity_extension, "o")
+                uri = ngx.re.sub(entity_noextension, "^/it6/(.*)", "/uri.semic.eu-puris/releases/it6/$1." .. entity_extension, "o")
              else 
 		 
 	 	     machineprocessable = false
@@ -928,8 +928,8 @@ it6              end
 			    uri = htmlmap.htmlmap[entity_noextension]
 		     else
 			    -- point to a default html page on the r5r vocabulary
---			    uri = ngx.re.sub(entity_noextension, "^/r5r/(.*)", "https://semiceu.github.io/uri.semic.eu-generated/r5r/release/3.0.0", "o")
-			    uri = "https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/"
+--			    uri = ngx.re.sub(entity_noextension, "^/it6/(.*)", "https://semiceu.github.io/MLDCAT-AP/releases/2.0.0", "o")
+			    uri = "https://semiceu.github.io/MLDCAT-AP/releases/2.0.0/"
 		    end
               end
          end
