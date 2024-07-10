@@ -189,6 +189,8 @@ _M.htmlmap = {
   ["/930/spatialResolutionAsScale"] = "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#instances-of-metric",
   ["/930/spatialResolutionAsVerticalDistance"] = "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/#instances-of-metric",
   
+  --it6 MLDCAT-AP
+  ["/it6/MachineLearningModel"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.0.0/#MachineLearningModel",
   --REST
   [ "/m8g/hasAddress" ] = " ",
   [ "/m8g/PublicServiceDataset" ] = " ",
