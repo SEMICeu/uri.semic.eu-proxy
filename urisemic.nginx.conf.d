@@ -928,8 +928,8 @@ it6              end
 			    uri = htmlmap.htmlmap[entity_noextension]
 		     else
 			    -- point to a default html page on the r5r vocabulary
---			    uri = ngx.re.sub(entity_noextension, "^/it6/(.*)", "https://semiceu.github.io/MLDCAT-AP/releases/2.0.0", "o")
-			    uri = "https://semiceu.github.io/MLDCAT-AP/releases/2.0.0/"
+--			    uri = ngx.re.sub(entity_noextension, "^/it6/(.*)", "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0", "o")
+			    uri = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/"
 		    end
               end
          end
