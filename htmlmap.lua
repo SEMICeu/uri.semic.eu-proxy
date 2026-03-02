@@ -359,6 +359,12 @@ _M.htmlmap = {
   ["/it6/intervalStart"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#QualityMeasurement.intervalstart", 	
   ["/it6/featureIndex"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#QualityMeasurement.featureindex", 
   
+  --s1n StatDCAT-AP
+  ["/s1n/attribute"] = "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/#attribute",
+  ["/s1n/dimension"] = "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/#dimension",
+  ["/s1n/numSeries"] = "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/#numberOfDataSeries",
+  ["/s1n/statUnitMeasure"] = "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/#unitOfMeasurement",
+
   --REST
   [ "/m8g/hasAddress" ] = " ",
   [ "/m8g/PublicServiceDataset" ] = " ",
