@@ -900,6 +900,14 @@ it6              end
 	 local uri_notrailingslash = ngx.var.uri
 	 local uri_notrailingslashtest, err =  ngx.re.match(uri, ".*/$", "")
 
+	-- handle root /it6 and /it6/ with content negotiation
+	 if uri == "/it6" then
+	       return ngx.redirect(uri .. "/it6")
+         end
+	 if uri == "/it6/" then
+	       return ngx.redirect(uri .. "it6")
+         end
+		 
          -- remove trailing slash and extension
 	 -- start
 	 if uri_notrailingslashtest then
