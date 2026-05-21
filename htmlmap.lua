@@ -339,28 +339,13 @@ _M.htmlmap = {
   ["/it6/targetFeature"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.1.0/#Task.targetfeature",
   ["/it6/TaskCollection"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.1.0/#TaskCollection",
   ["/it6/TaskType"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.1.0/#TaskType",
-
-  -- ["/it6/modifiedDate"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#MachineLearningModel.modifieddate", 
-  -- ["/it6/version"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#MachineLearningModel.version",
-  -- ["/it6/hasOutputFilePrediction"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#MachineLearningModel.hasoutputfileprediction",
-  -- ["/it6/runnedOn"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#MachineLearningModel.runnedon",
-  -- ["/it6/dataSplitsURL"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#EstimationProcedure.datasplitsurl",
-  -- ["/it6/value"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#EvaluationMeasure.value",
-  -- ["/it6/hasUploader"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Flow.hasuploader",
-  -- ["/it6/hasUploader"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Run.hasuploader",
-  -- ["/it6/hasUploader"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Collection.hasuploader",
-  -- ["/it6/version"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Library.version",
-  -- ["/it6/OutputFilePrediction"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#File",
-  -- ["/it6/url"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#OutputFileDescription.url",
-  -- ["/it6/value"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Parameter.value",
-  -- ["/it6/hasFile"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Repository.hasfile",
-  -- ["/it6/hasFlow"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Run.hasflow",
-  -- ["/it6/hasParameter"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#Run.parameter",
-  -- ["/it6/hasEnvironmentalImpact"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#Run.hasenvironmentalimpact",
-  -- ["/it6/hasTask"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#TaskCollection.hastask",
-  -- ["/it6/Risk"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#Risk",
-  -- ["/it6/intervalStart"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#QualityMeasurement.intervalstart", 	
-
+  -- Old puri
+  ["/it6/runnedOn"] = "https://semiceu.github.io/MLDCAT-AP/releases/3.0.0/#MachineLearningModel.runnedon",
+  ["/it6/dataSplitsURL"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#EstimationProcedure.datasplitsurl",
+  ["/it6/OutputFilePrediction"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#OutputFilePrediction",
+  ["/it6/hasEnvironmentalImpact"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#Run.hasenvironmentalimpact",
+  ["/it6/Risk"] = "https://semiceu.github.io/MLDCAT-AP/releases/2.1.0/#Risk",
+ 	
   --
   --s1n StatDCAT-AP
   ["/s1n/Dataflow"] = "https://semiceu.github.io/StatDCAT-AP/s1n/drafts/3.0.0/#Dataflow",
