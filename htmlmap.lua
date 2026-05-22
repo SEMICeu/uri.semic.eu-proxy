@@ -122,22 +122,23 @@ _M.htmlmap = {
   [ "/m8g/validThrough" ] = "https://semiceu.github.io/CPOV/releases/2.1.0/#Opening%20Hours%20Specification%3Avalid%20through",
 
   --Core Location
-  [ "/m8g/address" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.address",
-  [ "/m8g/adminUnit" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Address.administrativeunit",
-  [ "/m8g/AdminUnit" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#AdministrativeUnit",
-  [ "/m8g/code" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#AdministrativeUnit.code",
-  [ "/m8g/coordinates" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.coordinates",
-  [ "/m8g/crs" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.crs",
-  [ "/m8g/geometryType" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.geometrytype",
-  [ "/m8g/hasLocatorDesignator" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Address.haslocatordesignator",
-  [ "/m8g/latitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.latitude",
-  [ "/m8g/level" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#AdministrativeUnit.level",
-  [ "/m8g/location" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.location",
-  [ "/m8g/longitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Geometry.longitude",
-  [ "/m8g/registeredAddress" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.0/#Resource.registeredaddress",
+  [ "/m8g/adminUnit" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Address.administrativeunit",
+  [ "/m8g/AdminUnit" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#AdministrativeUnit",
+  [ "/m8g/code" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#AdministrativeUnit.code",
+  [ "/m8g/coordinates" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Geometry.coordinates",
+  [ "/m8g/crs" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Geometry.crs",
+  [ "/m8g/geometryType" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Geometry.geometrytype",
+  [ "/m8g/hasLocatorDesignator" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Address.haslocatordesignator",
+  [ "/m8g/latitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Geometry.latitude",
+  [ "/m8g/level" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#AdministrativeUnit.level",
+  [ "/m8g/longitude" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Geometry.longitude",
+  [ "/m8g/registeredAddress" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.1.1/#Resource.registeredaddress",
   [ "/w3c/ns/locn" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/w3c/",
   --Core Location deprecated
   [ "/m8g/core-location-ap" ] = "",
+  [ "/m8g/address" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1/#Resource.address",
+  [ "/m8g/location" ] = "https://semiceu.github.io/Core-Location-Vocabulary/releases/2.0.1/#Resource.location",
+
 
   --Core Person
   [ "/m8g/birthDate" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.1/#Person.dateofbirth",
