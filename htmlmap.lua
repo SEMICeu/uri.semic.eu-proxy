@@ -155,11 +155,18 @@ _M.htmlmap = {
   [ "/m8g/baptismalName" ] = "https://semiceu.github.io/Core-Person-Vocabulary/releases/2.1.0/#Person%3Abaptismal%20name",
 
   --Core Business
-  [ "/m8g/AccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#AccountingDocument",
-  [ "/m8g/hasAccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#LegalEntity.hasaccountingdocument",
-  [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#Identifier.identifies",
-  [ "/m8g/registrationDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0/#LegalEntity.registrationdate",
-  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.2.0",
+  [ "/m8g/AccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#AccountingDocument",
+  [ "/m8g/authorises" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#PowerOfAttorney.authorises",
+  [ "/m8g/hasAccountingDocument" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#LegalEntity.hasaccountingdocument",
+  [ "/m8g/hasLegalStatus" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#LegalEntity.haslegalstatus",
+  [ "/m8g/hasPowerOfAttorney" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#LegalEntity.haspowerofattorney",
+  [ "/m8g/identifies" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#Identifier.identifies",
+  [ "/m8g/LegalStatus" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#LegalStatus",
+  [ "/m8g/legalStatusDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#LegalStatus.legalstatusdate",
+  [ "/m8g/registrationDate" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#LegalEntity.registrationdate",
+  [ "/m8g/role" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#PowerOfAttorney.role",
+  [ "/m8g/scopeOfAttorney" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0/#PowerOfAttorney.scopeofattorney",
+  [ "/w3c/ns/legal" ] = "https://semiceu.github.io/Core-Business-Vocabulary/releases/2.3.0",
 
   --r5r DCAT-AP
   [ "/r5r/applicableLegislation" ] = "https://semiceu.github.io/DCAT-AP/r5r/releases/3.0.0/#applicableLegislation",
